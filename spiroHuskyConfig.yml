@@ -1,0 +1,110 @@
+headerRecognitionKeywords:
+  - Marker
+  - "h:mm:ss,ms"
+
+baseTimeParam: t
+
+readParams:
+  - name: t
+    digitsAfterComma: time
+  - name: P
+    digitsAfterComma: 0
+  - name: "V'E"
+    digitsAfterComma: 0
+  - name: "V'O2"
+    digitsAfterComma: 0
+  - name: "V'O2/kg"
+    digitsAfterComma: 0
+  - name: "V'CO2"
+    digitsAfterComma: 0
+  - name: RER
+  - name: "V'E/V'O2"
+  - name: "V'E/V'CO2"
+  - name: PetCO2
+  - name: PetO2
+  - name: HF
+    digitsAfterComma: 0
+  - name: "Q'(abgesch. V'O2max)"
+  - name: "SV (abgesch. V'O2max)"
+  - name: CI
+  - name: v
+  - name: VT
+
+calculatedParams:
+  - name: "V'O2/HF"
+    usedParam1: "V'O2"
+    usedParam2: "HF"
+    operation: div
+    digitsAfterComma: 2
+  - name: smoothedMonotonicV'O2
+    usedParam1: "V'O2"
+    operation: smoothMonotonic
+
+plots:
+  - x: t
+    y:
+      - "V'E"
+
+  - x: t
+    y:
+      - HF
+      - "V'O2/HF"
+
+  - x: t
+    y:
+      - "V'O2"
+      - "V'CO2"
+    sameAxisScaling: True
+
+  - x: "V'CO2"
+    y:
+      - "V'E"
+    scatter: True
+
+  - x: "V'O2"
+    y:
+      - "V'CO2"
+      - HF
+    scatter: True
+    angleBisector: true
+
+  - x: t
+    y:
+      - "V'E/V'O2"
+      - "V'E/V'CO2"
+    sameAxisScaling: True
+
+  - x: "V'E"
+    y:
+      - VT
+    scatter: True
+
+  - x: t
+    y:
+      - RER
+
+  - x: t
+    y:
+      - PetO2
+      - PetCO2
+    sameAxisScaling: True
+
+#  - x: t
+#    y:
+#      - smoothedMonotonicV'O2
+
+  - x: t
+    y:
+      - P
+      - HF
+
+  - x: t
+    y:
+      - v
+      - HF
+
+lineColor:
+  thresholds: "#189200"
+  angleBisectors: "#800080"
+  interactiveLines: "#00C9EC"
+  zones: "#926B00"

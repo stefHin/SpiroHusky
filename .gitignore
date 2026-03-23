@@ -1,0 +1,24 @@
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+
+# depracated code and other stuff
+deprecated/
+
+# for internal testing
+testdata/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.env/
