@@ -2,7 +2,7 @@
 
 An interactive toolkit for analyzing CPET (cardiopulmonary exercise testing) data.
 
-<img src="docs/spiroHuskyIcon.png" alt="SpiroHusky Logo" width="100" />
+<img src="docs/spiroHuskyIcon.png" alt="SpiroHusky Logo" width="200" />
 
 Features:
 - Interactive plotting of physiological signals
