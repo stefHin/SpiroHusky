@@ -22,9 +22,13 @@ Features:
 
 ## Getting Started
 
-### Use the comiled .exe File (recommended for non-programmers)
+### Use the compiled .exe File (recommended for non-programmers)
 
 Download the latest release for your operating system from the releases section. Make sure that the .exe file has the files spiroHuskyConfig.yml and spiroHuskyIcon.ico in the same folder. 
+
+If you start the .exe file directly, you are prompted to choose the input file - this may be a MetaLyzer XML file or a .spiro file (own file format of the application). You can also use the .exe as "open with" (which is the more convenient way to use it imo).
+
+In case you want to use several spiroHuskyConfig.yml files, it will always search in the folder of the selected file first, and uses the config file in the folder of the .exe file as a backup. For most users one config (in the folder of the .exe) is probably sufficient.
 
 ### Run from source
 
