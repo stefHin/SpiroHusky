@@ -4,9 +4,32 @@ An interactive toolkit for analyzing CPET (cardiopulmonary exercise testing) dat
 
 Features:
 - Interactive plotting of physiological signals
-- Custom draggable lines and thresholds
+- Draggable lines for ventilatory thresholds and training zones
+- Custom draggable lines for flexible analysis
 - Support for MetaLyzer XML input files
-- Export/import of sessions (.spiro files)
+- Import/export of sessions as `.spiro` files (compressed archive)  
+- Export plots as PDF or PNG  
+
+## Preview
+
+<p align="center">
+  <img src="docs/screenshot1.png" width="32%" />
+  <img src="docs/screenshot2.png" width="32%" />
+  <img src="docs/screenshot3.png" width="32%" />
+</p>
+
+## Getting Started
+
+### Use the comiled .exe File (recommended for non-programmers)
+
+Download the latest release for your operating system from the releases section. Make sure that the .exe file has the files spiroHuskyConfig.yml and spiroHuskyIcon.ico in the same folder. 
+
+### Run from source
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
 ## How to build
 
@@ -17,7 +40,6 @@ pyinstaller --onefile --windowed --name "SpiroHusky" --hidden-import=matplotlib.
 ```
 
 When running it, make sure it has the icon and the config file in the same folder.
-If you trust my compiled .exe file, you can also download it directly from the releases.
 
 ## Disclaimer
 
