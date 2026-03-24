@@ -30,6 +30,8 @@ If you start the .exe file directly, you are prompted to choose the input file -
 
 In case you want to use several spiroHuskyConfig.yml files, it will always search in the folder of the selected file first, and uses the config file in the folder of the .exe file as a backup. For most users one config (in the folder of the .exe) is probably sufficient.
 
+In the docs folder you find a sample .xml file that works - if your doesn't, this might be useful for testing.
+
 ### Run from source
 
 ```bash
