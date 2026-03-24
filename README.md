@@ -37,6 +37,12 @@ pip install -r requirements.txt
 python main.py
 ```
 
+## Tutorial
+
+If you have the time, I recommend just watching my tutorial video. This should show you everything relevant.
+
+[![Watch on YouTube](https://img.youtube.com/vi/MuQ1Kz4rbfw/0.jpg)](https://www.youtube.com/watch?v=MuQ1Kz4rbfw)
+
 ## How to build
 
 For windows I compiled it with 
