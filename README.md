@@ -45,7 +45,7 @@ If you have the time, I recommend watching my tutorial video. This should show y
 
 [![Watch on YouTube](https://img.youtube.com/vi/MuQ1Kz4rbfw/0.jpg)](https://www.youtube.com/watch?v=MuQ1Kz4rbfw)
 
-Otherwise, if you are familiar with CPET you probably can figure out the functionality. All the lines are draggable, for placing cusom lines use the right mouse key. To delete custom lines use the middle mouse key (press the mouse wheel). 
+Otherwise, if you are familiar with CPET you probably can figure out the functionality. All the lines are draggable, for placing custom lines use the right mouse key. To delete custom lines use the middle mouse key (press the mouse wheel). 
 
 ## File format
 
