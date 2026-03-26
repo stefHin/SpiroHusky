@@ -2,12 +2,13 @@ name: Build macOS App
 
 on:
   push:
-  branches: [ "main" ]
+    branches: 
+    - main
   workflow_dispatch:
 
 jobs:
   build-macos:
-  runs-on: macos-latest
+    runs-on: macos-latest
 
 steps:
   - name: Checkout repository
