@@ -33,6 +33,7 @@ jobs:
           --hidden-import=yaml \
           --icon=spiroHuskyIcon.ico \
           --add-data "spiroHuskyIcon.ico:." \
+          --add-data "spiroHuskyConfig.yml:." \
           main.py
 
       - name: Upload artifact
