@@ -9,34 +9,34 @@ on:
 jobs:
   build-macos:
     runs-on: macos-latest
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.11"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        pip install pyinstaller matplotlib pillow tkcolorpicker pyyaml
+      - name: Install dependencies
+        run: |
+          pip install pyinstaller matplotlib pillow tkcolorpicker pyyaml
 
-    - name: Build with PyInstaller
-      run: |
-        pyinstaller --noconfirm --clean --windowed --onedir \
-        --name "SpiroHusky" \
-        --collect-all matplotlib \
-        --hidden-import=matplotlib.backends.backend_tkagg \
-        --hidden-import=PIL._tkinter_finder \
-        --hidden-import=tkcolorpicker \
-        --hidden-import=yaml \
-        --icon=spiroHuskyIcon.ico \
-        --add-data "spiroHuskyIcon.ico:." \
-        main.py
+      - name: Build with PyInstaller
+        run: |
+          pyinstaller --noconfirm --clean --windowed --onedir \
+          --name "SpiroHusky" \
+          --collect-all matplotlib \
+          --hidden-import=matplotlib.backends.backend_tkagg \
+          --hidden-import=PIL._tkinter_finder \
+          --hidden-import=tkcolorpicker \
+          --hidden-import=yaml \
+          --icon=spiroHuskyIcon.ico \
+          --add-data "spiroHuskyIcon.ico:." \
+          main.py
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: SpiroHusky-macOS
-        path: dist/
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SpiroHusky-macOS
+          path: dist/
