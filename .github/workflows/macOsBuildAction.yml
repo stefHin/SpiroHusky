@@ -1,0 +1,43 @@
+name: Build macOS App
+
+on:
+push:
+branches: [ "main" ]
+workflow_dispatch:
+
+jobs:
+build-macos:
+runs-on: macos-latest
+
+```
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v3
+
+  - name: Set up Python
+    uses: actions/setup-python@v4
+    with:
+      python-version: "3.11"
+
+  - name: Install dependencies
+    run: |
+      pip install pyinstaller matplotlib pillow tkcolorpicker pyyaml
+
+  - name: Build with PyInstaller
+    run: |
+      pyinstaller --onefile --windowed \
+      --name "SpiroHusky" \
+      --hidden-import=matplotlib.backends.backend_tkagg \
+      --hidden-import=PIL._tkinter_finder \
+      --hidden-import=tkcolorpicker \
+      --hidden-import=yaml \
+      --icon=spiroHuskyIcon.ico \
+      --add-data "spiroHuskyIcon.ico:." \
+      main.py
+
+  - name: Upload artifact
+    uses: actions/upload-artifact@v4
+    with:
+      name: SpiroHusky-macOS
+      path: dist/
+```
