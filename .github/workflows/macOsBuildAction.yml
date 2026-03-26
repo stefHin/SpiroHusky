@@ -1,15 +1,14 @@
 name: Build macOS App
 
 on:
-push:
-branches: [ "main" ]
-workflow_dispatch:
+  push:
+  branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-build-macos:
-runs-on: macos-latest
+  build-macos:
+  runs-on: macos-latest
 
-```
 steps:
   - name: Checkout repository
     uses: actions/checkout@v3
@@ -25,8 +24,9 @@ steps:
 
   - name: Build with PyInstaller
     run: |
-      pyinstaller --onefile --windowed \
+      pyinstaller --noconfirm --clean --windowed --onedir \
       --name "SpiroHusky" \
+      --collect-all matplotlib \
       --hidden-import=matplotlib.backends.backend_tkagg \
       --hidden-import=PIL._tkinter_finder \
       --hidden-import=tkcolorpicker \
@@ -40,4 +40,3 @@ steps:
     with:
       name: SpiroHusky-macOS
       path: dist/
-```
