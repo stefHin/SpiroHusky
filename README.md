@@ -90,6 +90,13 @@ This project is not affiliated with or endorsed by the manufacturer.
 
 Users are responsible for ensuring they have the right to use such files.
 
+## Contact
+
+In case you have suggestions for improvement, found a bug or have any other question, feel free to contact me.
+
+<img src="docs/email.png" width="300" />
+
+
 ## License
 
 This project is licensed under the MIT License — see the LICENSE file for details.
